@@ -1,0 +1,869 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #181818; /* Dark mode background */
+    color: #f4f4f4;  /* Light text for dark mode */
+    line-height: 1.6;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 1200px;
+}
+
+/* Header */
+header {
+    background-color: #101823; /* Slightly darker shade based on your hero section background */
+    padding: 10px 20px; /* Reduced padding for a more compact header */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: auto;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Logo and Site Title in the middle */
+header .logo-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;  /* Space between logo and text */
+    margin-bottom: 2rem;  /* Add spacing below the logo-title */
+    text-align: center;
+}
+
+header .logo {
+    width: 30px;
+    height: auto;
+}
+
+header h1 {
+    font-size: 1.6rem; /* Slightly larger for better readability */
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ff6b6b;  /* Accent color */
+    font-family: 'Poppins', sans-serif; /* More modern and professional font */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+header h1:hover {
+    color: #ff4d4d;  /* Slightly different red on hover */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); /* More intense shadow on hover */
+}
+
+/* Navigation Menu */
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center the section buttons */
+    gap: 2.5rem;  /* Space between the navigation items */
+    margin: 0;
+    width: 100%; /* Spread navigation buttons across the whole header */
+}
+
+header nav ul li a {
+    color: #ffffff;  /* White text for contrast */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease;
+    font-family: 'Lato', sans-serif;  /* Professional font for the nav items */
+    text-transform: uppercase; /* Make the section names uppercase */
+    letter-spacing: 0.5px; /* Slight spacing for modern look */
+}
+
+header nav ul li a:hover {
+    background-color: #ff6b6b;  /* Red hover effect */
+    border-radius: 5px;
+    color: #000000;  /* Dark text on hover */
+}
+
+/* Mobile-friendly menu */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    header .logo-title {
+        margin-bottom: 1rem;
+    }
+}
+/* Sections */
+section {
+    padding: 3rem 0;
+    background-color: #222;  /* Darker background for sections */
+    margin: 2rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+section p {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #dddddd;
+}
+/* Hero Section */
+.hero {
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 0 20px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);  /* Subtle shadow for depth */
+}
+
+/* Main Heading */
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Subheading or Tagline */
+.hero p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.cta-button {
+    background-color: #ff6b6b;
+    color: #ffffff;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ff4d4d;
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+} 
+section ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Scholarships Section */
+.scholarships {
+    padding: 50px 0;
+    background-color: #1a1a1a; /* Dark background */
+    text-align: center;
+    color: #ffffff;
+}
+
+.scholarships h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    color: #ff6b6b;
+}
+
+.scholarships p {
+    font-size: 1.25rem;
+    max-width: 750px;
+    margin: 0 auto 2rem;
+    color: #cccccc;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* Scholarship List */
+.scholarships ul {
+    list-style: none;
+    padding: 0;
+}
+
+.scholarships ul li {
+    margin: 1rem 0;
+    padding: 15px;
+    display: flex; /* Aligns items on the same line */
+    align-items: center;
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-wrap: nowrap; /* Prevents line break */
+}
+
+.scholarships ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Scholarship Icons */
+.scholarships ul li img {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+    border-radius: 50%;
+    border: 2px solid #ff6b6b;
+}
+
+/* Scholarship Text */
+.scholarships ul li strong {
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.scholarships ul li span {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    color: #cccccc; /* Slightly lighter for the second part */
+    font-weight: 400;
+    white-space: nowrap; /* Prevents line break */
+}
+
+.scholarships ul li a {
+    color: #ff6b6b;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: auto;
+    font-size: 1.1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.scholarships ul li a:hover {
+    color: #ff4d4d;
+}
+
+/* Call to Action Button */
+.scholarships .cta-button {
+    background-color: #ff6b6b;
+    color: #ffffff;
+    padding: 0.75rem 2.5rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.scholarships .cta-button:hover {
+    background-color: #ff4d4d;
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+/* Universities Section */
+.universities {
+    padding: 50px 0;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+}
+
+.universities h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #ff6b6b;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.universities p {
+    font-size: 1.2rem;
+    max-width: 750px;
+    margin: 0 auto 2rem;
+    color: #cccccc;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* University List */
+.universities ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;  /* This enables wrapping to create rows */
+    justify-content: center;
+    gap: 20px;
+}
+
+/* University Items */
+.universities ul li {
+    background-color: #2c2c2c;
+    border-radius: 15px;
+    padding: 20px;
+    width: calc(50% - 40px); /* Adjusts the width to fit two items per row */
+    display: flex;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+    text-align: left;
+}
+
+.universities ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    border-color: #ff6b6b;
+}
+
+.universities ul li img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    border: 2px solid #ff6b6b;
+}
+
+.universities ul li strong {
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.universities ul li a {
+    color: #ff6b6b;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-left: auto;
+    transition: color 0.3s ease-in-out;
+}
+
+.universities ul li a:hover {
+    color: #ff4d4d;
+}
+
+/* Media query for smaller screens (mobile-friendly) */
+@media (max-width: 768px) {
+    .universities ul li {
+        width: 100%;  /* Full width on smaller screens */
+    }
+}
+/* General Container Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    color: #ffffff;
+}
+
+/* Scholarship Application Process Section */
+.process {
+    background-color: #1f1f1f;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.process h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #ff6b6b;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.process p {
+    font-size: 1.2rem;
+    color: #cccccc;
+    font-weight: 300;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+}
+
+.process ol {
+    list-style-type: decimal;
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+    max-width: 700px;
+}
+
+.process ol li {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    padding-left: 1.5rem;
+}
+
+.process img {
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    margin-top: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.process img:hover {
+    transform: scale(1.05);
+}
+
+/* Resources Section */
+.resources {
+    background-color: #2c2c2c;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.resources h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #ff6b6b;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.resources p {
+    font-size: 1.2rem;
+    color: #cccccc;
+    font-weight: 300;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+}
+
+.resources ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.resources ul li {
+    background-color: #333333;
+    border-radius: 15px;
+    padding: 20px;
+    width: calc(50% - 40px);
+    display: flex;
+    align-items: center;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resources ul li img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    border: 2px solid #ff6b6b;
+}
+
+.resources ul li a {
+    color: #ff6b6b;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.resources ul li a:hover {
+    color: #ff4d4d;
+}
+
+.resources ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Blog Section */
+.blog {
+    background-color: #1f1f1f;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.blog h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #ff6b6b;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.blog p {
+    font-size: 1.2rem;
+    color: #cccccc;
+    font-weight: 300;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+}
+
+.blog ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.blog ul li {
+    background-color: #333333;
+    border-radius: 15px;
+    padding: 20px;
+    width: calc(33% - 40px);
+    display: flex;
+    align-items: center;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog ul li img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin-right: 1rem;
+    border: 2px solid #ff6b6b;
+}
+
+.blog ul li a {
+    color: #ff6b6b;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.blog ul li a:hover {
+    color: #ff4d4d;
+}
+
+.blog ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .resources ul li, .blog ul li {
+        width: 100%;  /* Full width on smaller screens */
+    }
+}
+/* Contact Section */
+.contact {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #ff6b6b;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact form label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.contact form input, 
+.contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    outline: none;
+    background-color: #444;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.2);
+}
+
+.contact form button {
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s;
+}
+
+.contact form button:hover {
+    background-color: #ff4d4d;
+    transform: translateY(-2px);
+}
+
+.contact-icon {
+    max-width: 100px;
+    margin-top: 20px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #141414;
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 3px solid #ff6b6b;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #999;
+}
+
+footer a {
+    color: #ff6b6b;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ff4d4d;
+}
+
+.social-icon {
+    width: 24px;
+    margin-right: 8px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+footer a:hover .social-icon {
+    transform: scale(1.1);
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #181818;
+    color: #e0e0e0;
+}
+
+header.dark-mode, footer.dark-mode {
+    background-color: #111;
+}
+
+.hero.dark-mode {
+    background-color: #181818;
+}
+
+section.dark-mode {
+    background-color: #222;
+    color: #f4f4f4;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: #20232a;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.dark-mode-toggle:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+/* General Section Styling */
+section {
+    padding: 2rem 0; /* Reduced padding from 3rem to 2rem */
+    background-color: #222;  
+    margin: 1rem 0; /* Reduce margin between sections */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+/* Hero Section */
+.hero {
+    padding: 1.5rem 0; /* Reduce padding in the hero section */
+    height: 75vh; /* Adjust height if needed */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Scholarships Section */
+.scholarships {
+    padding: 2rem 0; /* Reduce padding for more compact look */
+    background-color: #1a1a1a;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 0; /* Ensure no extra space at the top */
+    margin-bottom: 1rem; /* Adjust bottom margin */
+}
+
+/* Adjusting Available Scholarships title and content */
+.scholarships h2 {
+    margin-bottom: 1rem; /* Less space below heading */
+}
+
+.scholarships p {
+    margin-bottom: 1.5rem; /* Reduced padding below paragraph */
+}
+/* General Section Styling with Background Image */
+section {
+    background-image: url('image20.jpg');  /* Apply the same background image */
+    background-size: cover;
+    background-position: center;
+    padding: 2rem 0;
+    margin: 1rem 0;
+    color: #ffffff; /* Ensure text is readable */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    position: relative; /* Ensure elements stay within section */
+}
+
+/* Overlay to darken the background image slightly */
+section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);  /* Dark overlay to make text readable */
+    z-index: 1;  /* Ensure overlay sits behind text */
+}
+
+/* Text content in sections */
+section .container {
+    position: relative;  /* Ensure content is on top of the overlay */
+    z-index: 2;
+}
+
+/* Hero Section */
+.hero {
+    height: 75vh;  /* Maintain height of hero section */
+}
+
+/* Specific section adjustments if needed */
+.scholarships, .universities, .process, .resources, .blog {
+    padding: 2rem 0;
+    margin-top: 0;
+    background-size: cover;  /* Ensure background image covers each section */
+    background-position: center;
+}
+/* General Section Styling with Background Image */
+section {
+    background-image: url('image20.jpg');  /* Apply the same background image */
+    background-size: cover;
+    background-position: center;
+    padding: 1.5rem 0;  /* Reduced padding */
+    margin: 0.5rem 0;   /* Reduced margin */
+    color: #ffffff; /* Ensure text is readable */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    position: relative; /* Ensure elements stay within section */
+}
+
+/* Overlay to darken the background image slightly */
+section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);  /* Dark overlay to make text readable */
+    z-index: 1;  /* Ensure overlay sits behind text */
+}
+
+/* Text content in sections */
+section .container {
+    position: relative;  /* Ensure content is on top of the overlay */
+    z-index: 2;
+}
+
+/* Hero Section */
+.hero {
+    height: 75vh;  /* Maintain height of hero section */
+}
+
+/* Specific section adjustments if needed */
+.scholarships, .universities, .process, .resources, .blog {
+    padding: 1.5rem 0;  /* Reduced padding for more compact sections */
+    margin: 0.5rem 0;   /* Reduced margin between sections */
+    background-size: cover;  /* Ensure background image covers each section */
+    background-position: center;
+}
